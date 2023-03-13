@@ -21,4 +21,4 @@ jobs:
       run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
  
     - name: Push Image
-        run:docker push oscar20191106/sub-web-modify
+      run: docker push oscar20191106/sub-web-modify
