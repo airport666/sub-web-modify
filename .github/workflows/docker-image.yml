@@ -16,8 +16,10 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag sub-web-modify:$(date +%s)
+    - uses: actions/checkout@v3
     - name: Login to Registry
       run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
+    - uses: actions/checkout@v3
     - name: Push Image
         run:|
           docker push oscar20191106/sub-web-modify
